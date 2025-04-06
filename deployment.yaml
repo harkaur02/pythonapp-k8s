@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-python-deployment
+  labels:
+    app: python1app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python1app
+  template:
+    metadata:
+      labels:
+        app: python1app
+    spec:
+      containers:
+      - name: python1app
+        image: thethymca/python-flask-sample-app:v1
+        ports:
+        - containerPort: 5001
