@@ -7,7 +7,7 @@ node {
     script {
       catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
         withCredentials([usernamePassword(
-          credentialsId: 'github',
+          credentialsId: 'git-credentials',
           usernameVariable: 'GIT_USERNAME',
           passwordVariable: 'GIT_PASSWORD'
         )]) {
