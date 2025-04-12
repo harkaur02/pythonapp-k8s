@@ -16,7 +16,7 @@ spec:
         app: pythonapp
     spec:
       containers:
-      - image: thethymca/pythonapp:5
+      - image: thethymca/pythonapp:11
         name: pythonapp
         resources: {}
 ---
